@@ -4,7 +4,7 @@
   }
   
   body {
-    background-color: #020631;
+    background-color: #300d1f;
   }
   
   .app {
@@ -84,4 +84,10 @@
     font-weight: 700;
     font-style: normal;
     color: grey;
+  }
+  .app .clock{
+    font-size: x-small;
+    margin-left: 90px;
+    color: grey;
+    
   }
