@@ -83,7 +83,7 @@
     font-size: medium;
     font-weight: 700;
     font-style: normal;
-    color: grey;
+    color: rgb(21, 20, 20);
   }
   .app .clock{
     font-size: x-small;
@@ -91,3 +91,24 @@
     color: grey;
     
   }
+  .app .active {
+    background-color: white;
+    padding-left: 118px;
+    padding-top: 34px;
+    align-items: center;
+    display: flex;
+}
+.app .completed {
+  padding-left: 109px;
+  padding-top: 16px;
+  align-items: center;
+  display: flex;
+}
+.app .active-check{
+  cursor: pointer;
+  font-size: medium;
+  font-weight: 900;
+  color: grey;
+  margin-right: 5px;
+}
+

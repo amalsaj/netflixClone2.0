@@ -21,14 +21,17 @@ const App = () => {
           type="text"
           placeholder="🖊️ Add item..."
         />
-        { toDo!=='' &&
+        {toDo !== "" && (
           <i
-          onClick={() =>
-            setTodos([...toDos, { id: Date.now(), text: toDo,time:Time ,status: false }])
-          }
-          className="fas fa-plus"
-        ></i>
-        }
+            onClick={() =>
+              setTodos([
+                ...toDos,
+                { id: Date.now(), text: toDo, time: Time, status: false },
+              ])
+            }
+            className="fas fa-plus"
+          ></i>
+        )}
       </div>
       <div className="todos">
         {toDos.map((value, index) => {
@@ -53,11 +56,16 @@ const App = () => {
                   name=""
                   id=""
                 />
-                <p>{value.text}</p>
-                <div className="clock">
-                 {value.time}
-                  </div>
-
+                <p
+                  style={{
+                    textDecoration: value.status ? "line-through" : "none",
+                    textDecorationColor: "black",
+                    opacity: value.status ? 0.5 : 1,
+                  }}
+                >
+                  {value.text}
+                </p>
+                <div className="clock">{value.time}</div>
               </div>
               <div className="right">
                 <i
@@ -73,7 +81,20 @@ const App = () => {
           );
         })}
       </div>
+      <div className="active">
+      <i class="fa-solid fa-list-check active-check"  style={{color: "#63E6BE",}}></i>
+       <h2  style={{color:'white'}} onClick={()=>{
+        setTodos(toDos.filter((value4) => value4.status !== true));
+       }}>Active</h2>
+      </div>
+      <div className="completed">
+      <i class="fa-solid fa-check-double active-check" style={{color: '#63E6BE'}}></i>
+       <h2 onClick={()=>{
+        setTodos(toDos.filter((value4) => value4.status !== false));
+       }}>Completed</h2>
+      </div>
     </div>
+    
   );
 };
 
