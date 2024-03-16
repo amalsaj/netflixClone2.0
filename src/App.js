@@ -21,12 +21,14 @@ const App = () => {
           type="text"
           placeholder="🖊️ Add item..."
         />
-        <i
+        { toDo!=='' &&
+          <i
           onClick={() =>
             setTodos([...toDos, { id: Date.now(), text: toDo,time:Time ,status: false }])
           }
           className="fas fa-plus"
         ></i>
+        }
       </div>
       <div className="todos">
         {toDos.map((value, index) => {
