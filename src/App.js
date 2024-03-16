@@ -5,6 +5,9 @@ const App = () => {
   const Time = new Date().toLocaleString();
   const [toDos, setTodos] = useState([]);
   const [toDo, setTodo] = useState("");
+  const [active, setActive] = useState([]);
+  const [complete, setComplete] = useState([]);
+
   return (
     <div className="app">
       <div className="mainHeading">
@@ -82,19 +85,50 @@ const App = () => {
         })}
       </div>
       <div className="active">
-      <i class="fa-solid fa-list-check active-check"  style={{color: "#63E6BE",}}></i>
-       <h2  style={{color:'white'}} onClick={()=>{
-        setTodos(toDos.filter((value4) => value4.status !== true));
-       }}>Active</h2>
+        <h2
+          onClick={() => {
+            const filteredTodos = toDos.filter((value4) => !value4.status);
+            setActive(filteredTodos);
+          }}
+        >
+          {" "}
+          <i
+            className="fa-solid fa-list-check active-check"
+            style={{ color: "#63E6BE" }}
+          ></i>
+          Active
+        </h2>
+        <ul>
+          {active.map((todo, index) => (
+            <li className="h" style={{ color: "white" }} key={index}>
+              {todo.text}
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="completed">
-      <i class="fa-solid fa-check-double active-check" style={{color: '#63E6BE'}}></i>
-       <h2 onClick={()=>{
-        setTodos(toDos.filter((value4) => value4.status !== false));
-       }}>Completed</h2>
+      <div className="active">
+        <h2
+          onClick={() => {
+            const completedTodos = toDos.filter((value4) => value4.status);
+            setComplete(completedTodos);
+          }}
+        >
+          {" "}
+          <i
+            class="fa-solid fa-check-double active-check"
+            style={{ color: "#63E6BE" }}
+          ></i>
+          Complete
+        </h2>
+        <ul>
+          {complete.map((todo, index) => (
+            <li className="h" style={{ color: "white" }} key={index}>
+              {todo.text}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
-    
   );
 };
 
