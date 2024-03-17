@@ -7,6 +7,8 @@ const App = () => {
   const [toDo, setTodo] = useState("");
   const [active, setActive] = useState([]);
   const [complete, setComplete] = useState([]);
+  const [flag, setFlag] = useState(false);
+  const [flag1, setFlag1] = useState(false);
 
   return (
     <div className="app">
@@ -62,7 +64,6 @@ const App = () => {
                 <p
                   style={{
                     textDecoration: value.status ? "line-through" : "none",
-                    textDecorationColor: "black",
                     opacity: value.status ? 0.5 : 1,
                   }}
                 >
@@ -85,48 +86,55 @@ const App = () => {
         })}
       </div>
       <div className="active">
-        <h2
+        <button
+          className="button"
           onClick={() => {
             const filteredTodos = toDos.filter((value4) => !value4.status);
             setActive(filteredTodos);
+            setFlag1(!flag1);
           }}
         >
-          {" "}
           <i
-            className="fa-solid fa-list-check active-check"
-            style={{ color: "#63E6BE" }}
+            className="fa-solid fa-bars-staggered active-check"
+            style={{ color: "#15b283" }}
           ></i>
           Active
-        </h2>
-        <ul>
-          {active.map((todo, index) => (
-            <li className="h" style={{ color: "white" }} key={index}>
-              {todo.text}
-            </li>
-          ))}
-        </ul>
+        </button>
+        {flag1 && (
+          <ul>
+            {active.map((todo, index) => (
+              <li className="h" key={index}>
+                {todo.text}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <div className="active">
-        <h2
+        <button
+          className="button"
           onClick={() => {
             const completedTodos = toDos.filter((value4) => value4.status);
             setComplete(completedTodos);
+            setFlag(!flag);
+            console.log(flag);
           }}
         >
-          {" "}
           <i
             class="fa-solid fa-check-double active-check"
-            style={{ color: "#63E6BE" }}
+            style={{ color: "#15b283" }}
           ></i>
-          Complete
-        </h2>
-        <ul>
-          {complete.map((todo, index) => (
-            <li className="h" style={{ color: "white" }} key={index}>
-              {todo.text}
-            </li>
-          ))}
-        </ul>
+          Completed
+        </button>
+        {flag && (
+          <ul>
+            {complete.map((todo, index) => (
+              <li className="h" key={index}>
+                {todo.text}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

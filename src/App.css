@@ -4,7 +4,7 @@
   }
   
   body {
-    background-color: #300d1f;
+    background-color: #110740;
   }
   
   .app {
@@ -93,17 +93,34 @@
   }
   .app .active {
     align-items: center;
-    display: flex;
     justify-content: center;
     flex-direction: column;
     font-size: small;
+    padding: 12px;
+    
+}
+.button{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 6px
+}
+.button:hover {
+  background-color: rgb(182, 178, 178);
+  color: rgb(0 0 0);
+}
+.app .completed {
+  align-items: center;
 }
 .app .active-check{
   cursor: pointer;
-  font-size: medium;
+  font-size: small;
   color: grey;
 }
 .app .h{
-  padding-top:44px
+  color : rgb(255, 255, 255);
+  padding-top:44px;
+ 
 }
+
+
 
