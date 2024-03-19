@@ -10,10 +10,18 @@
    cursor: pointer;
 
 }
+.samllPoster:hover{
+    transform: scale(1.1);
+}
 .posters::-webkit-scrollbar{
     display: none;
 }
 .poster{
     max-height: 250px;
     margin-right:10px;
+}
+.samllPoster{
+    max-height: 130px;
+    margin-right:10px;
+    transition: transform 0.3s ease;
 }
