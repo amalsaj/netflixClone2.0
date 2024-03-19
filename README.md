@@ -3,7 +3,8 @@ This project is a Netflix clone built using React, providing users with features
 # Netflix Clone Application
 ![Screenshot (289)](https://github.com/amalsaj/Netflix_Clone-using-React/assets/103961626/942f6f53-16a8-4333-b3f7-8fd9eb30d594)
 ![Screenshot (290)](https://github.com/amalsaj/Netflix_Clone-using-React/assets/103961626/62a6fdb2-7421-47db-8bd7-86c0b0a0900d)
-![Screenshot (291)](https://github.com/amalsaj/Netflix_Clone-using-React/assets/103961626/1f7ec49c-fac7-447f-9711-20de08c196a0)
+![Screenshot (291)](https://github.com/amalsaj/Netflix_Clone-using-React/assets/103961626/348ac8ee-7c4d-4a8c-9384-6f7b6d86b91c)
+
 
 
 
