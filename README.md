@@ -1,5 +1,11 @@
 # Netflix Clone
-This is a Netflix clone project built using React.
+This project is a Netflix clone built using React, providing users with features such as user authentication via Firebase, browsing movies and TV shows, watching trailers, all designed with a responsive layout for optimal user experience across desktop and mobile devices.
+# Netflix Clone Application
+![Screenshot (289)](https://github.com/amalsaj/Netflix_Clone-using-React/assets/103961626/942f6f53-16a8-4333-b3f7-8fd9eb30d594)
+![Screenshot (290)](https://github.com/amalsaj/Netflix_Clone-using-React/assets/103961626/62a6fdb2-7421-47db-8bd7-86c0b0a0900d)
+![Screenshot (291)](https://github.com/amalsaj/Netflix_Clone-using-React/assets/103961626/1f7ec49c-fac7-447f-9711-20de08c196a0)
+
+
 
 ## Features
 
