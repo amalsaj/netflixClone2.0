@@ -17,4 +17,34 @@
     position:fixed;
     right:20px;
     width:30px;
+    top: 12px;
+}
+.menu{
+    position:fixed;
+    color:rgba(255, 255, 255, 0.7);
+    font-size: 6.4px;
+    display: flex;
+    justify-content: space-between;
+    left:120px;
+    cursor: pointer;
+}
+.menus{
+    margin-left: 20px;
+}
+.menus:hover,.side:hover{
+    color:rgb(232, 229, 229);
+    transform: scale(1.1);
+
+}
+.side_bar{
+    position:fixed;
+    color:rgba(255, 255, 255, 0.7);
+    font-size: 6.4px;
+    display: flex;
+    right:75px;
+    cursor: pointer;
+}
+
+.side{
+    margin-left: 20px;
 }
