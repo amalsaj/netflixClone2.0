@@ -1,50 +1,98 @@
-.navbar{
+.navbar {
     position: fixed;
-    top:0;
-    width:100%;
-    height:30px;
+    top: 0;
+    width: 100%;
+    height: 30px;
     padding: 20px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #111;
-}
-.logo{
-    position:fixed;
-    left:20px;
-    width:80px;
-}
-.avatar{
-    position:fixed;
-    right:20px;
-    width:30px;
+  }
+  
+  .logo {
+    position: fixed;
+    left: 20px;
+    width: 80px;
+  }
+  
+  .avatar {
+    position: fixed;
+    right: 20px;
+    width: 30px;
     top: 12px;
-}
-.menu{
-    position:fixed;
-    color:rgba(255, 255, 255, 0.7);
+  }
+  
+  .menu {
+    position: fixed;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 6.4px;
     display: flex;
     justify-content: space-between;
-    left:120px;
+    left: 120px;
     cursor: pointer;
-}
-.menus{
+    transition: transform 0.3s ease;
+  }
+  
+  .menu.open {
+    transform: translateX(0);
+  }
+  
+  .menus {
     margin-left: 20px;
-}
-.menus:hover,.side:hover{
-    color:rgb(232, 229, 229);
-    transform: scale(1.1);
-
-}
-.side_bar{
-    position:fixed;
-    color:rgba(255, 255, 255, 0.7);
+  }
+  
+  .side_bar {
+    position: fixed;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 6.4px;
     display: flex;
-    right:75px;
+    right: 75px;
     cursor: pointer;
-}
-
-.side{
+  }
+  
+  .side {
     margin-left: 20px;
-}
+  }
+  
+  .menu-toggle {
+    display: none;
+    position: fixed;
+    left: 120px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      position: absolute;
+      height: 116px;
+      padding-bottom: 15px;
+      top: 60px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background-color: #111;
+      display: none;
+    }
+  
+    .menu.open {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .side_bar {
+      /* display: none; */
+    }
+  
+    .logo {
+      left: 20px;
+    }
+  }
+  
