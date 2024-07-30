@@ -25,3 +25,10 @@
     margin-right:10px;
     transition: transform 0.3s ease;
 }
+
+@media (max-width: 600px) {
+    .row h2{
+        font-size: 15px!important;
+        margin-top: 10px;
+    }
+  }
